@@ -10,7 +10,7 @@
 					<a class="nav-link {{" app_home" in app.request.attributes.get('_route') ? " active":" "}}" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Expériences</a>
+					<a class="nav-link" href="{{ path('app_experience') }}">Expériences</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Formations</a>
