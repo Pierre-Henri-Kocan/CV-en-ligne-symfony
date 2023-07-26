@@ -16,7 +16,7 @@
 					<a class="nav-link {{"app_formation" in app.request.attributes.get('_route') ? " active":" "}}" href="{{ path('app_formation') }}">Formations</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Technologies</a>
+					<a class="nav-link {{"app_technology" in app.request.attributes.get('_route') ? " active":" "}}" href="{{ path('app_technology') }}">Technologies</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Réalisations</a>

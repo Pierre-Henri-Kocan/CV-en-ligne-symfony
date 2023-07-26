@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Technologies{% endblock %}
+
+{% block body %}
+
+<div class="technology">
+    {% for technology in technologies %}
+        <div class="technology-card">
+            <img class="technology-image" src="{{ technology.image }}" alt="logo-{{ technology.name }}">
+            <hr>
+            <h3 class="technology-name">{{ technology.name }}</h3>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
