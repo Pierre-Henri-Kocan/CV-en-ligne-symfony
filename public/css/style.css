@@ -79,7 +79,7 @@ body {
     font-weight: 600;
 }
 
-.card-title {
+.card-title-name {
     color: var(--primary);
 }
 
@@ -185,7 +185,7 @@ body {
     }
   }
 
-  /* ---------------------- timeline ---------------------- */
+/* ---------------------- timeline ---------------------- */
 
   .timeline{
     position:relative;
@@ -328,3 +328,37 @@ body {
       right:inherit;
     }
   }
+
+/* ---------------------- technology ---------------------- */
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3rem 1rem;
+}
+
+.technology-card {
+  margin: 2rem;
+  background-color:#cdcdcd48;
+  padding: 2rem 2rem 3rem 2rem;
+  border-radius: 1rem;
+  transition: transform .5s;
+}
+
+.technology-card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.technology-image {
+  width: 15rem;
+}
+
+.technology-name {
+  text-align: center;
+  padding-top: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
