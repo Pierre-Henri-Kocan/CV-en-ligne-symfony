@@ -4,15 +4,21 @@
 
 {% block body %}
 
-{% for experience in experiences %}
-    <h2>{{ experience.title }}</h2>
-    <p>{{ experience.period }}</p>
-    <p>{{ experience.location }}</p>
+<div class="timeline">
     <ul>
-        {% for detail in experience.detail %}
-            <li>{{ detail.content }}</li>
-        {% endfor %}
+    {% for experience in experiences %}
+        <li>
+            <div class="content">
+                <h2>{{ experience.period }}</h2>
+                <h3>{{ experience.title }}</h3>
+                <h6>{{ experience.location }}</h6>
+                {% for detail in experience.detail %}
+                <p>{{ detail.content }}</p>
+                {% endfor %}
+            </div>
+        </li>
+    {% endfor %}
     </ul>
-{% endfor %}
+</div>
 
 {% endblock %}
