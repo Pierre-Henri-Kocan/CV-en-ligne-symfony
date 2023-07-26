@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Expériences{% endblock %}
+
+{% block body %}
+
+{% for experience in experiences %}
+    <h2>{{ experience.title }}</h2>
+    <p>{{ experience.period }}</p>
+    <p>{{ experience.location }}</p>
+    <ul>
+        {% for detail in experience.detail %}
+            <li>{{ detail.content }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+{% endblock %}
