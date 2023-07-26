@@ -4,15 +4,22 @@
 
 {% block body %}
 
-{% for formation in formations %}
-    <h2>{{ formation.title }}</h2>
-    <p>{{ formation.period }}</p>
-    <p>{{ formation.location }}</p>
+<div class="timeline">
     <ul>
-        {% for detail in formation.detail %}
-            <li>{{ detail.content }}</li>
-        {% endfor %}
+    {% for formation in formations %}
+        <li>
+            <div class="content">
+                <h2>{{ formation.period }}</h2>
+                <h3>{{ formation.title }}</h3>
+                <h6>{{ formation.location }}</h6>
+                {% for detail in formation.detail %}
+                <p>{{ detail.content }}</p>
+                {% endfor %}
+            </div>
+            
+        </li>
+    {% endfor %}
     </ul>
-{% endfor %}
+</div>
 
 {% endblock %}
