@@ -4,6 +4,8 @@
     --text: #606060;
     --primary: #276efd;
     --primary-light: #276efd7f;
+    --bg-gray-light: rgba(241, 240, 240, 0.50);
+    --br-gray-medium: rgba(208, 208, 208, 0.50);
 }
 
 * {
@@ -42,13 +44,36 @@ body {
     margin-right: 1rem;
 }
 
+/* ---------------------- footer ---------------------- */
+
+footer {
+  width: 100%;
+  background-color: var(--bg-gray-light);
+  padding: 1rem;
+  color: var(--text);
+  border-top: solid 1px var(--br-gray-medium);
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.btn-legal {
+  color: var(--text);
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline;
+}
+
 /* ---------------------- profil ---------------------- */
 
 .card {
     margin: 3rem auto 2rem auto;
-    background-color: rgba(241, 240, 240, 0.50);
+    background-color: var(--bg-gray-light);
     border-radius: 5px;
-    border: solid 1px rgba(208, 208, 208, 0.50);
+    border: solid 1px var(--br-gray-medium);
   }
   
 .profil-card {
@@ -158,11 +183,11 @@ body {
 /* ---------------------- about ---------------------- */
 
 .about {
-    background-color: rgba(241, 240, 240, 0.50);
+    background-color: var(--bg-gray-light);
     margin: 1rem auto 2rem auto; 
     padding: 1rem;
     border-radius: 5px;
-    border: solid 1px rgba(208, 208, 208, 0.50);
+    border: solid 1px var(--br-gray-medium);
 
   }
   
@@ -349,7 +374,9 @@ body {
 
 .technology-card:hover {
   transform: scale(1.1);
-  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+  box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.54);
+  -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.54);
+  -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.54);
 }
 
 .technology-image {
