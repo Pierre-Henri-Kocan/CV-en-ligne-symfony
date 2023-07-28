@@ -24,7 +24,7 @@ class ContactType extends AbstractType
                 ],
                 'label' => 'Prénom - Nom',
                 'label_attr' => [
-                    'class' => 'form-label mt-4'
+                    'class' => 'form-label mt-4 fw-bold'
                 ]
             ])
             ->add('email', EmailType::class, [
@@ -33,7 +33,7 @@ class ContactType extends AbstractType
                 ],
                 'label' => 'Adresse email',
                 'label_attr' => [
-                    'class' => 'form-label mt-4'
+                    'class' => 'form-label mt-4 fw-bold'
                 ]
             ])
             ->add('subject', TextType::class, [
@@ -42,7 +42,7 @@ class ContactType extends AbstractType
                 ],
                 'label' => 'Objet',
                 'label_attr' => [
-                    'class' => 'form-label mt-4'
+                    'class' => 'form-label mt-4 fw-bold'
                 ]
             ])
             ->add('message', TextareaType::class, [
@@ -51,7 +51,7 @@ class ContactType extends AbstractType
                 ],
                 'label' => 'Message',
                 'label_attr' => [
-                    'class' => 'form-label mt-4'
+                    'class' => 'form-label mt-4 fw-bold'
                 ]
             ])
             ->add('submit', SubmitType::class, [
