@@ -360,7 +360,7 @@ footer p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 3rem 1rem;
 }
 
