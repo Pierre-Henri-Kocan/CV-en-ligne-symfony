@@ -389,3 +389,9 @@ footer p {
   font-weight: 600;
   color: var(--primary);
 }
+
+/* ---------------------- contact ---------------------- */
+
+.contact-container {
+  margin-bottom: 15rem;
+}
