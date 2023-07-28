@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div class="container-fluid">
+		<a href="{{ path('app_home') }}"><img class="nav-avatar" src="{{ asset('images/avatar-navbar.png') }}" alt="avatar-phk"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link {{"app_home" in app.request.attributes.get('_route') ? " active":" "}}" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {{"app_experience" in app.request.attributes.get('_route') ? " active":" "}}" href="{{ path('app_experience') }}">Expériences</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {{"app_formation" in app.request.attributes.get('_route') ? " active":" "}}" href="{{ path('app_formation') }}">Formations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {{"app_technology" in app.request.attributes.get('_route') ? " active":" "}}" href="{{ path('app_technology') }}">Technologies</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Réalisations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Informations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {{"app_contact" in app.request.attributes.get('_route') ? " active":" "}}" href="{{ path('app_contact') }}">Contactez-moi</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div class="card">
+  <div class="profil-card">
+    <div class="profil-card-left">
+      <img src="{{ asset('images/profil-card/pierre-henri-kocan.jpeg') }}" class="profil-picture" alt="profil-picture">
+    </div>
+    <div class="profil-card-right">
+      <div class="card-body">
+        <h5 class="card-title-name">Pierre-Henri Kocan</h5>
+		<h6 class="card-function">- Developpeur web -<br> PHP / Symfony</h6>
+		<a href="tel:+33661878602" class="contact-link"><div class="contacts">
+			<img src="{{ asset('images/profil-card/phone.png') }}" alt="phone-picture">
+			<p>06.61.87.86.02</p>
+		</div></a>
+		<a href="mailto:ph.kocan@icloud.com" class="contact-link"><div class="contacts">
+		<img src="{{ asset('images/profil-card/mail.png') }}" alt="mail-picture">
+			<p>ph.kocan@icloud.com</p>
+		</div></a>
+		<a href="https://www.google.com/maps/place/95220+Herblay-sur-Seine/@49.0397038,2.0453435,10.59z/data=!4m5!3m4!1s0x47e6608a3b833cff:0x40b82c3688b31a0!8m2!3d48.990006!4d2.165493?hl=fr" target="_blank" class="contact-link"><div class="contacts">
+		<img src="{{ asset('images/profil-card/home.png') }}" alt="home-picture">
+			<p>Herblay-sur-Seine (95)</p>
+		</div></a>
+		<a href="https://github.com/Pierre-Henri-Kocan?tab=repositories" target="_blank" class="contact-link"><div class="contacts">
+			<img src="{{ asset('images/profil-card/github.png') }}" alt="github-picture">
+			<p>Pierre-Henri-Kocan</p>
+		</div></a>
+		<a href="https://www.linkedin.com/in/pierre-henri-kocan/" target="_blank" class="contact-link"><div class="contacts">
+			<img src="{{ asset('images/profil-card/linkedin.png') }}" alt="linkedin-picture">
+			<p>Pierre-Henri-Kocan</p>
+		</div></a>
+		<div class="contacts">
+			<img src="{{ asset('images/profil-card/family.png') }}" alt="family-picture">
+				<div class="card-text">
+					<p>38 ans, marié, 2 enfants</p>
+					<p>Permis A et B, véhiculé</p>
+				</div>
+		</div>
+		<a href="{{ asset('documents/CV-Pierre-Henri-KOCAN-2023.pdf') }}" target="_blank" class="contact-link"><div class="contacts">
+			<img src="{{ asset('images/profil-card/cv.png') }}" alt="linkedin-picture">
+			<p>CV au format PDF</p>
+		</div></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about" style="max-width: 1000px;">
+	<h2>À propos de moi</h2>
+	<p>Passionné de technologies depuis toujours, j’ai pu, durant mes précédentes expériences professionnelles, participer à des projets IT en tant que représentant métier et key user.</br>L’interaction avec les développeurs  a accru ma passion pour la programmation et la création de solutions technologiques innovantes.</p>
+	<p>J’ai donc pris la décision de transformer cette passion en une véritable carrière professionnelle.</br>J’ai eu l’opportunité de quitter mon emploi afin de pouvoir me concentrer pleinement sur ma formation de développeur web et de saisir chaque occasion de perfectionner mes compétences en programmation.</p>
+	<p>Je suis à présent prêt à concrétiser ce changement de carrière et enfin devenir développeur web.</p>
+</div>
+
+{% endblock %}

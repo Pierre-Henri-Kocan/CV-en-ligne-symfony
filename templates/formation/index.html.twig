@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations{% endblock %}
+
+{% block body %}
+
+<div class="timeline">
+    <ul>
+    {% for formation in formations %}
+        <li>
+            <div class="content">
+                <h2>{{ formation.period }}</h2>
+                <h3>{{ formation.title }}</h3>
+                <h6>{{ formation.location }}</h6>
+                {% for detail in formation.detail %}
+                <p>{{ detail.content }}</p>
+                {% endfor %}
+            </div>
+            
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
