@@ -17,9 +17,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: auto;
     font-family: 'Quicksand', sans-serif;
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+    background-attachment: fixed;
 }
 
 /* ---------------------- navbar ---------------------- */
@@ -240,7 +241,7 @@ footer p {
   }
 
   .content h6 {
-    color: #b2b0b0;
+    color: #ffffff;
   }
 
   .timeline ul{
@@ -393,5 +394,9 @@ footer p {
 /* ---------------------- contact ---------------------- */
 
 .contact-container {
-  margin-bottom: 15rem;
+  margin-bottom: 14rem;
+}
+
+.form-control {
+  background-color: var(--bg-gray-light);
 }
