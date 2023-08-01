@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réalisations{% endblock %}
+
+{% block body %}
+
+<div class="main-title">
+    <h1>Réalisations</h1>
+</div>
+<div class="technology">
+    {% for realisation in realisations %}
+        <div class="technology-card">
+            <img class="technology-image" src="{{ realisation.image }}" alt="logo-{{ realisation.name }}">
+            <h3 class="technology-name">{{ realisation.name }}</h3>
+            <p class="information-text-right">{{ realisation.description }}</p>
+            <div class="realisation-button">
+                {% if realisation.online is empty %}
+                    <a href="{{ realisation.github }}" target="_blank" class="btn btn-custom">GitHub</a>
+                {% else %}
+                    <a href="{{ realisation.github }}" target="_blank" class="btn btn-custom">GitHub</a>
+                    <a href="{{ realisation.online }}" target="_blank" class="btn btn-custom">Site web</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
