@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Informations{% endblock %}
+
+{% block body %}
+
+<div class="main-title">
+    <h1>Informations</h1>
+</div>
+<div class="information-container">
+    <div class="aside-left">
+        <h3 class="information-title-left">Soft skills</h3>
+        <div class="information">
+            {% for information  in informations %}
+                <div class="information-card">
+                    <img class="information-image" src="{{ information.image }}" alt="logo-{{ information.name }}">
+                    <h3 class="information-name">{{ information.name }}</h3>
+                    <p class="information-text-left">{{ information.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="aside-right">
+        <div class="skill">
+            <h3 class="information-title-right">Compétences clés</h3>
+            <p class="information-text-right">Polyvalence</p>
+            <p class="information-text-right">Organisation</p>
+            <p class="information-text-right">Autonomie</p>
+        </div>
+        <div class="language">
+            <h3 class="information-title-right">Langues</h3>
+            <p class="information-text-right">Français – Maternelle</p>
+            <p class="information-text-right">Anglais - Intermédiaire</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
