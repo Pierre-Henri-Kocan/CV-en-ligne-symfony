@@ -21,8 +21,9 @@ body {
     align-items: center;
     width: auto;
     font-family: 'Quicksand', sans-serif;
-    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-    background-attachment: fixed;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+    /* background-attachment: fixed; */
 }
 
 .main-title {
@@ -381,10 +382,14 @@ footer p {
 }
 
 .technology-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 2rem;
   background-color:var(--bg-gray-light);
   padding: 2rem 2rem 3rem 2rem;
   border-radius: 1rem;
+  width: 20rem;
   transition: transform .5s;
 }
 
@@ -407,6 +412,18 @@ footer p {
   font-weight: 600;
   color: var(--title);
 }
+/* ---------------------- realisation ---------------------- */
+
+.btn-custom {
+  background-color: var(--primary);
+  color: #ffffff;
+  margin: 0 0.3rem;
+}
+
+.btn-custom:hover {
+  background-color: var(--primary-light);
+  color: #ffffff;
+}
 
 /* ---------------------- information ---------------------- */
 
@@ -417,10 +434,13 @@ footer p {
 }
 
 .aside-left {
-  margin-top: 2rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   width: 75%;
+  border: 1px solid var(--br-gray-medium);
+  border-radius: 5px;
+  background-color: var(--bg-gray-light);
 }
 
 .aside-right {
