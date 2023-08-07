@@ -12,17 +12,24 @@
 		
 	</head>
 
-{% include "includes/_header.html.twig" %}
-
+    <style>
+    .container {
+        background-color: rgba(241, 240, 240, 0.50);
+        margin: 2rem;
+        padding: 2rem;
+    }
+    h3 {
+        color: #333E83;
+    }
+    </style>
 	<body>
-		{% block body %}
-		
-		{% endblock %}
+        <div class="container">
+            <h3>Bonjour {{ contact.name }}</h3>
+            <p>Merci pour votre message : {{ contact.subject }}</p>
+            <p>" {{ contact.message }} "</p>
+            <p>Je reviens vers vous à ce sujet dans les meilleurs délais.</p>
+            <hr>
+            <h5>Pierre-Henri Kocan</h5>
+        </div>
 	</body>
-    {% block javascripts %}
-			<script src="{{ asset('js/script.js') }}" defer></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-	{% endblock %}
-
-{% include "includes/_footer.html.twig" %}
 </html>
