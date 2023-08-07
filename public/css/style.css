@@ -4,7 +4,7 @@
     --text: #606060;
     --title: #333E83;
     --main-title: #f8475c;
-    --primary: #276efd;
+    --primary: #276EFD;
     --primary-light: #276efd7f;
     --bg-gray-light: rgba(241, 240, 240, 0.50);
     --br-gray-medium: rgba(163, 162, 162, 0.5);
@@ -21,9 +21,7 @@ body {
     align-items: center;
     width: auto;
     font-family: 'Quicksand', sans-serif;
-    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
-    /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
-    /* background-attachment: fixed; */
+    background: linear-gradient(90deg, rgb(72, 135, 243) 0%, rgb(122, 221, 244) 100%);
 }
 
 .main-title {
@@ -34,7 +32,7 @@ body {
 .main-title h1{
   margin-top: 1.5rem;
   padding: 0.5rem 2rem;
-  color: var(--primary);
+  color: #ffffff;
   text-align: center;
 }
 

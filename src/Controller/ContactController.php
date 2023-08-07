@@ -5,12 +5,12 @@ namespace App\Controller;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ContactController extends AbstractController
 {
@@ -26,15 +26,18 @@ class ContactController extends AbstractController
             $em->persist($contact);
             $em->flush();
 
-            $email = (new Email())
-            ->from($contact->getEmail())
-            ->to('ph.kocan@icloud.com')
-            //->cc('cc@example.com')
-            //->bcc('bcc@example.com')
-            //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
+            $email = (new TemplatedEmail())
+            ->from('ph.kocan@icloud.com')
+            ->to($contact->getEmail())
             ->subject($contact->getSubject())
-            ->html($contact->getMessage());
+
+            // path of the Twig template to render
+            ->htmlTemplate('emails/receipt.html.twig')
+
+            // pass variables (name => value) to the template
+            ->context([
+                'contact' => $contact,
+            ]);
 
             $mailer->send($email);
 
