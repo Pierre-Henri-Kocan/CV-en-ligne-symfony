@@ -26,20 +26,18 @@ class ContactController extends AbstractController
             $em->persist($contact);
             $em->flush();
 
-            $email = (new TemplatedEmail())
-            ->from('ph.kocan@icloud.com')
-            ->to($contact->getEmail())
-            ->subject($contact->getSubject())
+            // $email = (new TemplatedEmail())
+            // ->from('ph.kocan@gmail.com')
+            // ->to($contact->getEmail())
+            // ->subject($contact->getSubject())
 
-            // path of the Twig template to render
-            ->htmlTemplate('emails/receipt.html.twig')
+            // ->htmlTemplate('emails/receipt.html.twig')
 
-            // pass variables (name => value) to the template
-            ->context([
-                'contact' => $contact,
-            ]);
+            // ->context([
+            //     'contact' => $contact,
+            // ]);
 
-            $mailer->send($email);
+            // $mailer->send($email);
 
             $this->addFlash('success', 'Votre message a bien été envoyé');
 
