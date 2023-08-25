@@ -26,6 +26,14 @@ class ContactController extends AbstractController
             $em->persist($contact);
             $em->flush();
 
+            $name = $contact->getName();
+            $to = $contact->getEmail();
+            $subject = 'Accusé de réception : ' . $contact->getSubject();
+            $message = 'Merci ' . $name . ' pour votre message.' . PHP_EOL . PHP_EOL . 'Je reviens vers vous dans les meilleurs délais concernant votre demande : ' . PHP_EOL . PHP_EOL . $contact->getMessage();
+            $headers = 'From: contact@pierre-henri-kocan.com' . "\r\n" . 'Bcc: ph.kocan@icloud.com';
+
+            mail($to, mb_encode_mimeheader($subject), $message, $headers);
+
             // $email = (new TemplatedEmail())
             // ->from('ph.kocan@gmail.com')
             // ->to($contact->getEmail())
